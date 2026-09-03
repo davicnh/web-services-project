@@ -15,19 +15,17 @@ import java.util.List;
 @RequestMapping(value = "/users")
 public class UserResource {
 
-    @Autowired
-    private UserService service;
+  @Autowired private UserService service;
 
-    @GetMapping
-    public ResponseEntity<List<User>> findALL() {
-        List<User> list = service.findAll();
-        return ResponseEntity.ok().body(list);
-    }
+  @GetMapping
+  public ResponseEntity<List<User>> findALL() {
+    List<User> list = service.findAll();
+    return ResponseEntity.ok().body(list);
+  }
 
-    @GetMapping(value = "/{id}")
-    public ResponseEntity<User> findById (@PathVariable Long id) {
-        User obj = service.findById(id);
-        return ResponseEntity.ok().body(obj);
-    }
-
+  @GetMapping(value = "/{id}")
+  public ResponseEntity<User> findById(@PathVariable Long id) {
+    User obj = service.findById(id);
+    return ResponseEntity.ok().body(obj);
+  }
 }
