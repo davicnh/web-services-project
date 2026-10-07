@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+pom.xml
+mvnw.cmd
+mvnw
+Dockerfile
+.gitignore
+.gitattributes
+.mvn/wrapper
